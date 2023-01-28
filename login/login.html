@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="contairer">
+        <div class="forms">
+            <!--login etudiant-->
+            <div class="form login">
+                <span class="title">connexion d'étudiant</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" class="email" placeholder="entez votre username">
+                    <i class="uil uil-user-circle icon"></i>
+                    <small>error message</small>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="entez votre mot de passe" >
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                        <small>error message</small>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">se souvenir de moi</label>
+                        </div>
+                        <a href="#" class="text">mot de passe oublié?</a>
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" value="Se connecter" required>
+                    </div>
+                </form>
+                <div class="login-prof">
+                    <span class="text loginProf-link"><a href="#">
+                        je suis un enseignant
+                    </a>
+                    </span>
+                </div>
+            </div>
+            <!--login prof-->
+            <div class="form loginProf">
+                <span class="title">connexion d'enseignant</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" class="email" placeholder="entez votre username" >
+                    <i class="uil uil-user-circle icon"></i>
+                    <small>error message</small>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="entez votre mot de passe" >
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                        <small>error message</small>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">se souvenir de moi</label>
+                        </div>
+                        <a href="#" class="text">mot de passe oublié?</a>
+                    </div>
+                    <div class="input-field button">
+                        <a href="http://127.0.0.1:5500/enseignant/accueil_enseigant.html"><input type="submit" value="Se connecter" required></a>
+                    </div>
+                </form>
+                <div class="login-prof">
+                    <span class="text loginEt-link"><a href="#">
+                        je suis un étudiant
+                    </a>
+                    </span>
+                </div>
+            </div>
+            <!--login prof-->
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

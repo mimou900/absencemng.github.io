@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mon Profile</title>
+</head>
+<body>
+    <nav class="sidbar close">
+        <header>
+            <div class="imge-text">
+                <span class="image">
+                    <img src="prof.png" alt="prof_img">
+                </span>
+                <div class="text header-text">
+                    <span class="prof-name">Ababsa Mohamed</span>
+                    <span class="prof-module">Admin</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="accueil_admin.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="liste_des_etudiants.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Liste des etudiants</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-links">
+                        <a href="liste_des_enseignants.html">
+                            <i class='bx bx-briefcase-alt-2 icon'></i>
+                            <span class="text nav-text">Liste des enseignants</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="liste_des_modules.html">
+                            <i class='bx bx-chalkboard icon' ></i>
+                            <span class="text nav-text">Liste des modules</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="Liste_des_abcences.html">
+                            <i class='bx bx-cabinet icon'></i>
+                            <span class="text nav-text">Liste des abcences</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="Profile_admin.html">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="http://127.0.0.1:5500/login/login_admin.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Déconnecter</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- hna yabda sa7-->
+    <section class="prof-home">
+        <main>
+            <h1 class="page-name">Mon profile</h1>
+            <div class="col-xl-8 order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Information du profile</h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#!" class="btn btn-sm btn-primary">enregistrer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-address">email</label>
+                                            <input id="input-address" class="form-control form-control-alternative curser"
+                                                placeholder="Address Email" value="elyes-ababsa@univ-constantine2.dz" type="text" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-username">encien mot de passe</label>
+                                            <input type="password" id="input-username" class="form-control form-control-alternative"
+                                                placeholder="mot de passe">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">nouveau le mot de passe</label>
+                                            <input type="password" id="input-email" class="form-control form-control-alternative"
+                                                placeholder="mot de passe">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-first-name">Nom</label>
+                                            <input type="text" id="input-first-name" class="form-control form-control-alternative"
+                                                placeholder="First name" value="ababsa">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-last-name">Prenom</label>
+                                            <input type="text" id="input-last-name" class="form-control form-control-alternative"
+                                                placeholder="Last name" value="Prenom">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+    </section>
+</div>
+<!-- hna i5los sa7-->
+    <script src="script.js"></script>
+</body>
+</html>

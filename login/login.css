@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var();
+}
+:root{
+    --body-color:#E4E9F7;
+    --sidebar-color:#FFF;
+    --white-color:#FFF;
+    --color-light: rgba(132,139,200,0.3);
+    --primary-color:#22CC9D;
+    --primary-color-forced:#22CC9D;
+    --primary-color-light:#F6F5FF;
+    --hd-table-color:#F9FAFB;
+    --toggle-color:#999;
+    --text-color:#707070;
+    --danger-color:#ff7782;
+    --success-color:#41f1b6;
+    --warning-color:#ffbb55;
+    --tran-02:all 0.2s ease;
+    --tran-03:all 0.3s ease;
+    --tran-04:all 0.4s ease;
+    --tran-05:all 0.5s ease;
+    --card-border-radius: 2rem;
+    --border-radius1: 0.4rem;
+    --border-radius2: 0.8rem;
+    --border-radius3: 1.2rem;
+    --card-padding: 1.5rem;
+    --padding1: 1.2rem;
+    --box-shadow: 0 1rem 3rem var(--color-light)
+}
+body{
+    height: 100vh;
+    background: var(--body-color);
+}
+body.dark{
+    --primary-color2:#22CC9D;
+    --body-color:#18191A;
+    --sidebar-color:#242526;
+    --primary-color:#3A3B3C;
+    --primary-color-light:#3A3B3C;
+    --toggle-color:#FFF;
+    --text-color:#CCC;
+    --white-color:rgb(237, 235, 235);
+}
+.contairer{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--sidebar-color);
+    box-shadow: 0 1rem 3rem rgba(132,139,200,0.5);
+    overflow: hidden;
+}
+.contairer .forms{
+    width: 200%;
+    display: flex;
+    height: 440px;
+    align-items: center;
+    transition: height 0.2s ease;
+}
+.contairer.active .login{
+    margin-left: -50%;
+}
+.contairer .loginProf{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.contairer.active .loginProf{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+.contairer.active .login{
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+.contairer .form{
+    padding: 30px;
+    width: 50%;
+    transition: margin-left 0.18s ease;
+}
+
+.contairer .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30PX;
+    background-color: var(--primary-color-forced);
+    border-radius: 25px;
+}
+.form .input-field{
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border:none;
+    outline:none;
+    font-size: 16px;
+    border-bottom: 2px solid #CCC;
+    border-top: 2px solid #CCC transparent;
+    transition: all 0.2s ease;
+}
+.input-field input:not(:placeholder-shown), input:is(:focus), .input-field.error input:not(:placeholder-shown){
+    border-bottom-color: var(--primary-color-forced);
+}
+.input-field.error input{
+    border-bottom-color: var(--danger-color);
+}
+.input-field input:not(:placeholder-shown)~ i, input:is(:focus) ~ i{
+    color: var(--primary-color-forced);
+}
+.input-field.error i{
+    color: var(--danger-color);
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--toggle-color);
+    font-size: 23px;
+}
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+}
+.form .checkbox-text{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    accent-color: var(--primary-color-forced);
+}
+.form a.text{
+    text-decoration: none;
+    color: var(--primary-color-forced);
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .text{
+    color: var(--text-color);
+    font-size: 14px;
+}
+.form .button{
+     margin-top: 35px;
+
+}
+.form .button input{
+    background: var(--primary-color-forced);
+    border: none;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button input:hover{
+    background: #17916f;
+}
+.form .login-prof{
+    margin-top: 30px;
+    text-align: center;
+}
+.login-prof a{
+    text-decoration: none;
+    color: #17916f;
+}

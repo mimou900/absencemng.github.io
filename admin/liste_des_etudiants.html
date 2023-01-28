@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Liste Des Etudiants</title>
+</head>
+<body>
+    <nav class="sidbar close">
+        <header>
+            <div class="imge-text">
+                <span class="image">
+                    <img src="prof.png" alt="prof_img">
+                </span>
+                <div class="text header-text">
+                    <span class="prof-name">Ababsa Mohamed</span>
+                    <span class="prof-module">Admin</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="accueil_admin.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="liste_des_etudiants.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Liste des etudiants</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-links">
+                        <a href="liste_des_enseignants.html">
+                            <i class='bx bx-briefcase-alt-2 icon'></i>
+                            <span class="text nav-text">Liste des enseignants</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="liste_des_modules.html">
+                            <i class='bx bx-chalkboard icon' ></i>
+                            <span class="text nav-text">Liste des modules</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="Liste_des_abcences.html">
+                            <i class='bx bx-cabinet icon'></i>
+                            <span class="text nav-text">Liste des abcences</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="Profile_admin.html">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="http://127.0.0.1:5500/login/login_admin.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Déconnecter</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- hna yabda sa7-->
+    <section class="prof-home">
+        <main>
+            <h1 class="page-name">Liste Des Etudiants</h1>
+            <!-----start table-->
+            <dir class="board">
+                <table width="100%">
+                    <thead class="options">
+                        <tr>
+                            <td onClick="refreshPage()"><i class='bx bx-refresh'></i></td>
+                            <td colspan=3 class="search">
+                                <div class="searchBox">
+                                  <div class="select-groupe">
+                                    <p>Tous les groupes</p>
+                                    <i class='bx bxs-down-arrow'></i>
+                                    <ul class="list">
+                                        <li class="option">Groupe 01</li>
+                                        <li class="option">Groupe 02</li>
+                                        <li class="option">Groupe 03</li>
+                                    </ul>
+                                  </div>
+                                  <input type="text" placeholder="chercher dans tous les groupes">
+                                  <i class='bx bx-search-alt icon'></i>
+                                </div>
+                            </td>
+                            <td class="trash"><i class='bx bx-trash'></i></td>
+                            <td><button class="btn btn-sm btn-primary"><a href="ajouter_etudiant.html"><i class='bx bx-pencil'></i><h5>Ajouter</h5></a></button></td>
+                        </tr>
+                    </thead>
+                    <thead>
+                        <tr>
+                            <td><input type="checkbox" onClick="selectAll(this)"></td>
+                            <td>Nom et prenom</td>
+                            <td>email</td>
+                            <td>Num du groupe</td>
+                            <td>spécialité</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                                        <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="slect-et">
+                            </td>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                </div>
+                            </td>
+                            <td class="numGr">
+                                <h5>elyes-ababsa@univ-constantine2.dz</h5>
+                            </td>
+                            <td class="numAb">
+                                <H5>01</H5>
+                            </td>
+                            <td>
+                                <h5>TI</H5>
+                            </td>
+                            <td class="edit"><a href="modifier_etudiant.html">
+                                <i class='bx bx-edit'></i>
+                                editer
+                            </a></td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                </table>
+            </dir>
+            <!-----fin table-->
+        </main>
+    </section>
+</div>
+<!-- hna i5los sa7-->
+    <script src="script.js"></script>
+</body>
+</html>

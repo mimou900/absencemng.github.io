@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Liste Des Abcences</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="popupContent">
+        <button onclick="removeJustification()" class="close1">&times;</button>
+        <h2>la justification:</h2>
+        <div class="popupC">
+        <img src="prof.png">
+        </div>
+    </div>
+    </div>
+    <nav class="sidbar close">
+        <header>
+            <div class="imge-text">
+                <span class="image">
+                    <img src="prof.png" alt="prof_img">
+                </span>
+                <div class="text header-text">
+                    <span class="prof-name">Zakaria Belmonah</span>
+                    <span class="prof-module">DAM</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="accueil_enseigant.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="liste_des_etudiants.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Liste des etudiants</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="Liste_des_abcences.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Liste des abcences</span>
+                        </a>
+                    </li>
+                    <li onclick="addNotification()" class="nav-links notification">
+                        <a>
+                            <i id="bell" class='bx bx-bell icon animated tada' ></i>
+                            <span id="unread" class="unread animated zoomIn">0</span>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="profile_enseigant.html">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="login.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Déconnecter</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- hna yabda sa7-->
+    <section class="prof-home">
+        <section class="notification-bar">
+            <header>
+                <h5>notifications</h5>
+            </header>
+            <ul>
+                <li>
+                    <div class="toast warning">
+                        <div class="container-1">
+                            <i class='bx bx-info-circle'></i>
+                        </div>
+                        <div class="container-2">
+                            <p>Warning</p>
+                            <p>Username you have entered is invalid.</p>
+                        </div>
+                        <button>&times;</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="toast warning">
+                        <div class="container-1">
+                            <i class='bx bx-info-circle'></i>
+                        </div>
+                        <div class="container-2">
+                            <p>Warning</p>
+                            <p>Username you have entered is invalid.</p>
+                        </div>
+                        <button>&times;</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="toast warning">
+                        <div class="container-1">
+                            <i class='bx bx-info-circle'></i>
+                        </div>
+                        <div class="container-2">
+                            <p>Warning</p>
+                            <p>Username you have entered is invalid.</p>
+                        </div>
+                        <button>&times;</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="toast warning">
+                        <div class="container-1">
+                            <i class='bx bx-info-circle'></i>
+                        </div>
+                        <div class="container-2">
+                            <p>Warning</p>
+                            <p>Username you have entered is invalid.</p>
+                        </div>
+                        <button>&times;</button>
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
+        <main>
+            <h1 class="page-name">Liste Des Abcences</h1>
+            <!-----start table-->
+            <dir class="board">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>étudiant</td>
+                            <td>date et heure</td>
+                            <td>type</td>
+                            <td>justification</td>
+                            <td>decision</td>
+                        </tr>
+                    </thead>
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                    <small>elyes-ababsa@univ-constantine2.dz</small>
+                                </div>
+                            </td>
+                            <td class="numAb">
+                                <H5>10/11/2022   10:30</H5>
+                            </td>
+                            <td class="numAb">
+                                <H5>TD</H5>
+                            </td>
+                            <td onclick="voirJustification()" class="numAb voirJus">
+                                <button class="btn btn-sm acc">
+                                <h5>voir la justification</h5>
+                            </button>
+                            </td>
+                            <td class="buttonC"><a href="#">
+                                <button class="btn btn-sm btn-primary">
+                                    <h5>accepter</h5>
+                                </button>
+                            </a>
+                            <button class="btn btn-sm rjt">
+                                <h5>rejeter</h5>
+                            </button>
+                        </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                    <small>elyes-ababsa@univ-constantine2.dz</small>
+                                </div>
+                            </td>
+                            <td class="numAb">
+                                <H5>10/11/2022   10:30</H5>
+                            </td>
+                            <td class="numAb">
+                                <H5>TD</H5>
+                            </td>
+                            <td onclick="voirJustification()" class="numAb voirJus">
+                                <button class="btn btn-sm acc">
+                                <h5>voir la justification</h5>
+                            </button>
+                            </td>
+                            <td class="buttonC"><a href="#">
+                                <button class="btn btn-sm btn-primary">
+                                    <h5>accepter</h5>
+                                </button>
+                            </a>
+                            <button class="btn btn-sm rjt">
+                                <h5>rejeter</h5>
+                            </button>
+                        </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                    <small>elyes-ababsa@univ-constantine2.dz</small>
+                                </div>
+                            </td>
+                            <td class="numAb">
+                                <H5>10/11/2022   10:30</H5>
+                            </td>
+                            <td class="numAb">
+                                <H5>TD</H5>
+                            </td>
+                            <td onclick="voirJustification()" class="numAb voirJus">
+                                <button class="btn btn-sm acc">
+                                <h5>voir la justification</h5>
+                            </button>
+                            </td>
+                            <td class="buttonC"><a href="#">
+                                <button class="btn btn-sm btn-primary">
+                                    <h5>accepter</h5>
+                                </button>
+                            </a>
+                            <button class="btn btn-sm rjt">
+                                <h5>rejeter</h5>
+                            </button>
+                        </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                    <small>elyes-ababsa@univ-constantine2.dz</small>
+                                </div>
+                            </td>
+                            <td class="numAb">
+                                <H5>10/11/2022   10:30</H5>
+                            </td>
+                            <td class="numAb">
+                                <H5>TD</H5>
+                            </td>
+                            <td onclick="voirJustification()" class="numAb voirJus">
+                                <button class="btn btn-sm acc">
+                                <h5>voir la justification</h5>
+                            </button>
+                            </td>
+                            <td class="buttonC"><a href="#">
+                                <button class="btn btn-sm btn-primary">
+                                    <h5>accepter</h5>
+                                </button>
+                            </a>
+                            <button class="btn btn-sm rjt">
+                                <h5>rejeter</h5>
+                            </button>
+                        </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                    <!-- ligne -->
+                    <tbody>
+                        <tr>
+                            <td class="étudiant">
+                                <img src="prof.png" alt="">
+                                <div class="cord">
+                                    <h5>Ababsa Mohamed Elyes</h5>
+                                    <small>elyes-ababsa@univ-constantine2.dz</small>
+                                </div>
+                            </td>
+                            <td class="numAb">
+                                <H5>10/11/2022   10:30</H5>
+                            </td>
+                            <td class="numAb">
+                                <H5>TD</H5>
+                            </td>
+                            <td onclick="voirJustification()" class="numAb voirJus">
+                                <button class="btn btn-sm acc">
+                                <h5>voir la justification</h5>
+                            </button>
+                            </td>
+                            <td class="buttonC"><a href="#">
+                                <button class="btn btn-sm btn-primary">
+                                    <h5>accepter</h5>
+                                </button>
+                            </a>
+                            <button class="btn btn-sm rjt">
+                                <h5>rejeter</h5>
+                            </button>
+                        </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- fin ligne -->
+                    
+                </table>
+            </dir>
+            <!-----fin table-->
+        </main>
+    </section>
+</div>
+<!-- hna i5los sa7-->
+    <script src="script.js"></script>
+</body>
+</html>
